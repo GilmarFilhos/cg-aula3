@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1. Um ponto</title>
+</head>
+<body>
+
+<h2>Desenhando UM ponto</h2>
+<canvas id="canvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+
+<script>
+const canvas = document.getElementById('canvas'); // corrigido "getElementBtId" -> "getElementById"
+const ctx = canvas.getContext('2d');
+
+ctx.fillStyle = 'red';
+
+
+ctx.beginPath();
+ctx.arc(200, 150, 5, 0, 2 * Math.PI);
+
+
+
+
+ctx.fill();
+</script>
+
+</body>
+</html>

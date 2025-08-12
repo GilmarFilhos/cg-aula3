@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>5. Dois Segmentos</title>
+</head>
+<body>
+<h2>Dois segmentos e mais um EF</h2>
+<canvas id="canvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.strokeStyle = 'black';
+ctx.beginPath();
+ctx.moveTo(60, 60);
+ctx.lineTo(180, 220);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(240, 60);
+ctx.lineTo(340, 220);
+ctx.stroke();
+
+ctx.strokeStyle = 'green';
+ctx.beginPath();
+ctx.moveTo(80, 260);
+ctx.lineTo(320, 120);
+ctx.stroke();
+
+ctx.fillStyle = 'red';
+ctx.beginPath();
+ctx.arc(60, 60, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.font = '16px Arial';
+ctx.fillText('A', 70, 65);
+
+ctx.fillStyle = 'blue';
+ctx.beginPath();
+ctx.arc(180, 220, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.fillText('B', 190, 225);
+
+ctx.fillStyle = 'purple';
+ctx.beginPath();
+ctx.arc(240, 60, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.fillText('C', 250, 65);
+
+ctx.fillStyle = 'orange';
+ctx.beginPath();
+ctx.arc(340, 220, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.fillText('D', 350, 225);
+
+ctx.fillStyle = 'teal';
+ctx.beginPath();
+ctx.arc(80, 260, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.fillText('E', 90, 265);
+
+ctx.fillStyle = 'brown';
+ctx.beginPath();
+ctx.arc(320, 120, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.fillText('F', 330, 125);
+
+</script>
+</body>
+</html>

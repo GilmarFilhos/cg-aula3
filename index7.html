@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>7. Retas Perpendiculares Simples</title>
+</head>
+<body>
+<h2>Retas perpendiculares</h2>
+<canvas id="canvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+ctx.strokeStyle = 'black';
+ctx.beginPath();
+ctx.moveTo(50, 100);
+ctx.lineTo(350, 100);
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(150, 40);
+ctx.lineTo(150, 260);
+ctx.stroke();
+
+ctx.fillStyle = 'red';
+ctx.beginPath();
+ctx.arc(150, 100, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.font = '16px Arial';
+ctx.fillText('Interseção (150, 100)', 160, 95);
+
+</script>
+</body>
+</html>

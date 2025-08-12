@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>10. Dois Triângulos</title>
+</head>
+<body>
+<h2>Triângulo e triângulo interno pelos pontos médios</h2>
+<canvas id="canvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+const A = {x:150, y:50};
+const B = {x:80, y:200};
+const C = {x:220, y:200};
+
+ctx.strokeStyle = 'black';
+ctx.beginPath();
+ctx.moveTo(A.x, A.y);
+ctx.lineTo(B.x, B.y);
+ctx.lineTo(C.x, C.y);
+ctx.lineTo(A.x, A.y);
+ctx.stroke();
+
+const D = {x:(A.x+B.x)/2, y:(A.y+B.y)/2};
+const E = {x:(B.x+C.x)/2, y:(B.y+C.y)/2};
+const F = {x:(C.x+A.x)/2, y:(C.y+A.y)/2};
+
+ctx.beginPath();
+ctx.moveTo(D.x, D.y);
+ctx.lineTo(E.x, E.y);
+ctx.lineTo(F.x, F.y);
+ctx.lineTo(D.x, D.y);
+ctx.stroke();
+
+function ponto(p, cor, nome) {
+    ctx.fillStyle = cor;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, 5, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.fillStyle = 'black';
+    ctx.font = '16px Arial';
+    ctx.fillText(nome, p.x + 10, p.y + 5);
+}
+
+ponto(A, 'red', 'A');
+ponto(B, 'blue', 'B');
+ponto(C, 'green', 'C');
+ponto(D, 'purple', 'D');
+ponto(E, 'orange', 'E');
+ponto(F, 'teal', 'F');
+
+</script>
+</body>
+</html>

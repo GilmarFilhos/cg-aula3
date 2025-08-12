@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>9. Triângulo Simples</title>
+</head>
+<body>
+<h2>Triângulo ABC</h2>
+<canvas id="canvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+const A = {x:150, y:80};
+const B = {x:80, y:220};
+const C = {x:220, y:220};
+
+ctx.strokeStyle = 'black';
+ctx.beginPath();
+ctx.moveTo(A.x, A.y);
+ctx.lineTo(B.x, B.y);
+ctx.lineTo(C.x, C.y);
+ctx.lineTo(A.x, A.y);
+ctx.stroke();
+
+ctx.fillStyle = 'red';
+ctx.beginPath();
+ctx.arc(A.x, A.y, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.font = '16px Arial';
+ctx.fillText('A', A.x + 10, A.y + 5);
+
+ctx.fillStyle = 'blue';
+ctx.beginPath();
+ctx.arc(B.x, B.y, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.fillText('B', B.x + 10, B.y + 5);
+
+ctx.fillStyle = 'green';
+ctx.beginPath();
+ctx.arc(C.x, C.y, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.fillText('C', C.x + 10, C.y + 5);
+
+</script>
+</body>
+</html>

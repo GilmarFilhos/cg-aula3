@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>8. Dividindo um Segmento ao Meio</title>
+</head>
+<body>
+<h2>Ponto médio de AB</h2>
+<canvas id="canvas" width="400" height="300" style="border: 1px solid black;"></canvas>
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+const ax = 50, ay = 50, bx = 350, by = 250;
+ctx.strokeStyle = 'black';
+ctx.beginPath();
+ctx.moveTo(ax, ay);
+ctx.lineTo(bx, by);
+ctx.stroke();
+
+const mx = (ax + bx) / 2;
+const my = (ay + by) / 2;
+
+ctx.fillStyle = 'red';
+ctx.beginPath();
+ctx.arc(ax, ay, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.font = '16px Arial';
+ctx.fillText('A', ax + 8, ay + 5);
+
+ctx.fillStyle = 'blue';
+ctx.beginPath();
+ctx.arc(bx, by, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.fillText('B', bx + 8, by + 5);
+
+ctx.fillStyle = 'green';
+ctx.beginPath();
+ctx.arc(mx, my, 5, 0, 2 * Math.PI);
+ctx.fill();
+ctx.fillStyle = 'black';
+ctx.fillText('M (' + mx + ', ' + my + ')', mx + 10, my + 5);
+
+</script>
+</body>
+</html>
